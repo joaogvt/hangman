@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="icon.png" type="image/png" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="boneco">
+      <div class="head"></div>
+      <div class="torso"></div>
+      <div class="arms">
+        <div class="arm-1"></div>
+        <div class="arm-2"></div>
+      </div>
+      <div class="legs">
+        <div class="leg-1"></div>
+        <div class="leg-2"></div>
+      </div>
+    </div>
+    <div class="letters"></div>
+    <input
+      id="guessInput"
+      type="text"
+      maxlength="1"
+      onkeydown="return /[a-z]/i.test(event.key)"
+    />
+    <button id="guessBtn">Submit</button>
+    <div class="statusScreen">
+      <h1 id="statusText"></h1>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </body>
+</html>

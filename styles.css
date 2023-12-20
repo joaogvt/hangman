@@ -1,0 +1,146 @@
+body {
+  background-color: #333;
+  color: white;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.letters {
+  font-size: 4rem;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.letters span {
+  position: relative;
+  display: inline-block;
+  margin: 0px 10px -15.5px 10px;
+  text-align: center;
+  width: 4rem;
+}
+
+.letters span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: inherit;
+  height: 3px;
+  background-color: white;
+}
+
+input {
+  text-align: center;
+  width: 2em;
+  height: 2em;
+  font-size: 2rem;
+  border: 1px solid black;
+  outline: none;
+}
+
+button {
+  text-align: center;
+  margin-top: 1rem;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid white;
+  background-color: black;
+  font-size: 2em;
+  color: white;
+  transition: all 500ms ease;
+  outline: none;
+}
+
+button:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+.head {
+  border: 5px solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  visibility: hidden;
+}
+.torso {
+  width: 5px;
+  height: 60px;
+  background-color: black;
+  visibility: hidden;
+}
+.arms {
+  position: relative;
+}
+.arm-1 {
+  position: absolute;
+  background-color: black;
+  width: 5px;
+  height: 50px;
+  transform: rotate(45deg);
+  right: 14.5px;
+  bottom: 5px;
+  visibility: hidden;
+}
+.arm-2 {
+  position: absolute;
+  background-color: black;
+  width: 5px;
+  height: 50px;
+  transform: rotate(-45deg);
+  left: 14.5px;
+  bottom: 5px;
+  visibility: hidden;
+}
+.legs {
+  position: relative;
+}
+.leg-1 {
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background-color: black;
+  transform: rotate(35deg);
+  right: 11.5px;
+  top: -6.5px;
+  visibility: hidden;
+}
+.leg-2 {
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background-color: black;
+  transform: rotate(-35deg);
+  left: 11.5px;
+  top: -6.5px;
+  visibility: hidden;
+}
+
+.boneco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+.statusScreen {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
